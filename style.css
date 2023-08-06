@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body{
+    font-family: 'REM', sans-serif;
+}
+
+.header-text{
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 45px;
+    color: black;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+    margin-top: 7rem;
+}
+
+.selections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.selections button{
+    width: 200px;
+    background-color: goldenrod;
+    text-align: center;
+    padding: .5rem;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.sketch-pad{
+    display: grid;
+}
+

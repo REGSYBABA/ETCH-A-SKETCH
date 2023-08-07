@@ -4,8 +4,6 @@ let selectBtn = document.querySelector('#select-btn')
 const chooseColor = document.querySelector('#colorpicker');
 let color = 'black'
 let click = false
-let Eraser = false
-
 
 document.addEventListener('DOMContentLoaded', () => {
     // setGrid(4)
@@ -19,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let size = choiceGrid()
         setGrid(size)
     })
-    console.log(board)
+    // console.log(board)
     setColor()
     
 })
@@ -42,7 +40,7 @@ function choiceGrid(){
   let messageEl = document.querySelector('#message')
   if (input === ''){
     messageEl.innerHTML = 'Please input a valid value'
-   }else if (input < 0 || input > 100){
+   }else if (input <= 0 || input > 100){
     messageEl.innerHTML = 'Please input a value betwen 1 and 100'
     board.disabled = true
    } else {
@@ -73,7 +71,6 @@ function setColor(colorChoice){
 }
 
 function resetGrid(){
-    let divs = document.querySelectorAll('div')
+    let divs = document.querySelectorAll('.clean')
     divs.forEach(div => div.style.backgroundColor = 'white')    
 }
-

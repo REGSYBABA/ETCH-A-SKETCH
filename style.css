@@ -8,6 +8,10 @@
 
 body{
     font-family: 'REM', sans-serif;
+    background-color: #E08DAC;
+    height: 100vh;
+    color: #fff;
+    background-color: #bb9a48;   
 }
 
 .header-text{
@@ -22,7 +26,7 @@ main{
     align-items: center;
     justify-content: center;
     gap: 15rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 .selections{
@@ -30,11 +34,15 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    /* background-color: #fff; */
+    background-color: #9b8141;
+    box-shadow: 8px -6px 20px black;
+    padding: 2rem;
 }
 
 .selections button{
     width: 200px;
-    background-color: goldenrod;
+    background: none;
     text-align: center;
     padding: .5rem;
     border: 2px solid black;
@@ -42,9 +50,69 @@ main{
     border-radius: 5px;
     font-weight: 700;
     font-size: 16px;
+    color: white;
+    transition: all .4s ease-in-out;
+    margin-bottom: -.5rem;
+}
+
+button:hover{
+   transform: scale(1.1);
 }
 
 .sketch-pad{
     display: grid;
+    background-color: white;
+    box-shadow: 8px 8px 0px black, 10px 10px 0 yellow;
+    border-radius: 7px;
+    width: 550px; 
+    height: 550px; 
+    border: 5px solid chartreuse;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    gap: 20px;
+    font-size: 25px;
+}
+
+footer .git{
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .git:hover{
+    transform: rotate(360deg) scale(1.2);
+}
+
+@media screen and (max-width: 600px){
+    body{
+        height: 100vh;
+    }
+    main{
+        flex-direction: column-reverse;
+    }
+    .selections{
+        flex-direction: column;
+        margin-top: -7rem;
+        gap: 3em;  
+    }
+    .sketch-pad{
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 605px) and (max-width: 1100px){
+    body{
+        margin: 50px auto;
+    }
+    main{
+        gap: 5rem;
+        padding: 0 3rem;
+    }
+}
